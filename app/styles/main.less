@@ -1,0 +1,49 @@
+@import "../bower_components/bootstrap/less/bootstrap.less";
+@icon-font-path: "../fonts/glyphicons/";
+
+@import "../bower_components/font-awesome/less/font-awesome.less";
+@fa-font-path: "../fonts/font-awesome";
+
+
+/* Space out content a bit */
+body {
+    padding-top: 20px;
+    padding-bottom: 70px;
+}
+
+.map {
+    height: 250px;
+    border: 1px solid #e7e7e7;
+    border-radius: 5px;
+    -webkit-transition:300ms linear;
+	-moz-transition:300ms linear;
+	-o-transition:300ms linear;
+	-ms-transition:300ms linear;
+	transition:300ms linear;
+    margin-bottom:20px;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 700px;
+    }
+    .map {
+        height: 400px;
+    }
+}
+/* Medium devices (desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+    .container {
+        max-width: 800px;
+    }
+    .map {
+        height: 600px;
+    }
+}
+/* Large devices (large desktops, 1200px and up) */
+@media screen and (min-width: 1200px) {
+    .container {
+        max-width: 1000px;
+    }
+}
