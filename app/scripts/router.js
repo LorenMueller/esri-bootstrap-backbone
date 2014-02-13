@@ -1,6 +1,6 @@
 define(["dojo/_base/declare", "myApp/views/views"],
     function (declare, Views) {
-    	WUIDemoApp.views = Views;
+    	yourCoolApp.views = Views;
 		var Router = Backbone.Router.extend({
 			routes : {
 				"splash": "splash",
@@ -10,7 +10,7 @@ define(["dojo/_base/declare", "myApp/views/views"],
 			},
 			notFound: function(){
 				try{
-					WUIDemoApp.router.navigate("splash",{trigger:true});
+					yourCoolApp.router.navigate("splash",{trigger:true});
 				}catch(err){
 					console.error('Router error, notFound: ', err.message);
 				}
@@ -19,7 +19,7 @@ define(["dojo/_base/declare", "myApp/views/views"],
 				try{
 					var sv;
 					Views.destroyAll();
-					if(WUIDemoApp.views.getView('splash')){
+					if(yourCoolApp.views.getView('splash')){
 						//already have this view, show it
 						Views.showView('splash');
 					}else{
@@ -36,19 +36,19 @@ define(["dojo/_base/declare", "myApp/views/views"],
 					var mv;
 					Views.hideAll();
 					//show/create view
-					if(WUIDemoApp.views.getView('map')){
+					if(yourCoolApp.views.getView('map')){
 						//already have this view, show it
 						Views.showView('map');
 						//re-initialize the map
-						WUIDemoApp.mapping.mapState.height = $('#mapContent').height();
-	              		WUIDemoApp.mapping.mapState.width = $('#mapContent').width();
-						WUIDemoApp.mapping.reInitMap();
+						yourCoolApp.mapping.mapState.height = $('#mapContent').height();
+	              		yourCoolApp.mapping.mapState.width = $('#mapContent').width();
+						yourCoolApp.mapping.reInitMap();
 					}else{
 						//no view, make it.
 						mv = Views.makeView('map')
 						Views.showView('map');
 						//initialize the map
-						WUIDemoApp.mapping.init();
+						yourCoolApp.mapping.init();
 					};
 				}catch(err){
 					console.error('Router error, map: ', err.message);
@@ -57,16 +57,16 @@ define(["dojo/_base/declare", "myApp/views/views"],
 			about : function() {
 				try{
 					var av;
-					if(!WUIDemoApp.views.getView('map')){
+					if(!yourCoolApp.views.getView('map')){
 						//if routing to the this view from a saved link for example, re-init app by routing to splash
-						WUIDemoApp.router.navigate("splash",{trigger:true});
+						yourCoolApp.router.navigate("splash",{trigger:true});
 						return;
 					};
-					WUIDemoApp.mapping.recordMapState();
-					WUIDemoApp.mapping.destroyMap();
+					yourCoolApp.mapping.recordMapState();
+					yourCoolApp.mapping.destroyMap();
 					Views.hideAll();
 					//show/create view
-					if(WUIDemoApp.views.getView('about')){
+					if(yourCoolApp.views.getView('about')){
 						//already have this view, show it
 						Views.showView('about');
 					}else{

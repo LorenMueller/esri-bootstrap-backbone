@@ -1,4 +1,4 @@
-window.WUIDemoApp = {
+window.yourCoolApp = {
 	router:{},
 	views:{},
 	mapping:{},
@@ -6,10 +6,10 @@ window.WUIDemoApp = {
 		'use strict';
 		try {
 			require(["myApp/router","myApp/mapping"], function(Router, Mapping) { 
-				WUIDemoApp.mapping = new Mapping();
-				WUIDemoApp.router = new Router();
+				yourCoolApp.mapping = new Mapping();
+				yourCoolApp.router = new Router();
 				Backbone.history.start();
-				WUIDemoApp.router.navigate("splash",{trigger:true});
+				yourCoolApp.router.navigate("splash",{trigger:true});
 			});
 		}catch(e){
 			console.error("Error initializing application: ", e.message);
@@ -17,5 +17,5 @@ window.WUIDemoApp = {
 	}
 };
 require(["dojo/domReady!"], function() { 
-	WUIDemoApp.init();
+	yourCoolApp.init();
 });
