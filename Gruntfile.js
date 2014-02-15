@@ -1,11 +1,4 @@
-// Generated on 2014-02-01 using generator-bootstrap-less 3.2.0
 'use strict';
-
-// # Globbing
-// for performance reasons we're only matching one level down:
-// 'test/spec/{,*/}*.js'
-// use this if you want to match all subfolders:
-// 'test/spec/**/*.js'
 
 module.exports = function (grunt) {
   // load all grunt tasks
