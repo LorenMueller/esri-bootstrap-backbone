@@ -20,4 +20,4 @@ The Backbone views could be handled differently but this works pretty well. Ther
 
 Looking forward to comments and/or suggestions.
 
-Loren
+Loren Mueller
